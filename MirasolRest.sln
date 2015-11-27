@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MirasolRest", "MirasolRest\MirasolRest.csproj", "{0E948DCE-8AC3-4C47-A5A3-62B32D64845C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MirasolDAL", "MirasolDAL\MirasolDAL.csproj", "{AB632737-3E1D-420D-92D7-A29A08A1519F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MirasolDTO", "MirasolDTO\MirasolDTO.csproj", "{BCE1508F-8C9E-4E4D-A94E-62DAB6A983DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E948DCE-8AC3-4C47-A5A3-62B32D64845C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E948DCE-8AC3-4C47-A5A3-62B32D64845C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E948DCE-8AC3-4C47-A5A3-62B32D64845C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E948DCE-8AC3-4C47-A5A3-62B32D64845C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB632737-3E1D-420D-92D7-A29A08A1519F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB632737-3E1D-420D-92D7-A29A08A1519F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB632737-3E1D-420D-92D7-A29A08A1519F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB632737-3E1D-420D-92D7-A29A08A1519F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCE1508F-8C9E-4E4D-A94E-62DAB6A983DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE1508F-8C9E-4E4D-A94E-62DAB6A983DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE1508F-8C9E-4E4D-A94E-62DAB6A983DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE1508F-8C9E-4E4D-A94E-62DAB6A983DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
