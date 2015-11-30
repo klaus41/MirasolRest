@@ -286,6 +286,16 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MirasolDAL\MirasolDAL.csproj">
+      <Project>{ab632737-3e1d-420d-92d7-a29a08a1519f}</Project>
+      <Name>MirasolDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MirasolDTO\MirasolDTO.csproj">
+      <Project>{bce1508f-8c9e-4e4d-a94e-62dab6a983db}</Project>
+      <Name>MirasolDTO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
