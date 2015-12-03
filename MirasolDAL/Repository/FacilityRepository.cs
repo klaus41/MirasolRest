@@ -1,5 +1,6 @@
 ﻿using MirasolDAL.Context;
 using MirasolDAL.DomainModel;
+using MirasolDAL.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,30 +9,29 @@ using System.Threading.Tasks;
 
 namespace MirasolDAL.Repository
 {
-    public class ApartmentRepository : IRepository<Apartment>
+    class FacilityRepository : IRepository<Facilities>
     {
-        
-        public void Add(Apartment t)
+        public void Add(Facilities t)
         {
             using (var ctx = new MirasolContext())
             {
-                ctx.Apartments.Add(t);
+                ctx.Facilities.Add(t);
                 ctx.SaveChanges();
             }
         }
 
         public void Delete(int id)
         {
-            Apartment t = Find(id);
+            Facilities t = Find(id);
             using (var ctx = new MirasolContext())
             {
-                ctx.Apartments.Attach(t);
-                ctx.Apartments.Remove(t);
+                ctx.Facilities.Attach(t);
+                ctx.Facilities.Remove(t);
                 ctx.SaveChanges();
             }
         }
 
-        public Apartment Find(int id)
+        public Facilities Find(int id)
         {
             foreach (var item in ReadAll())
             {
@@ -43,26 +43,17 @@ namespace MirasolDAL.Repository
             return null;
         }
 
-        public List<Apartment> ReadAll()
+        public List<Facilities> ReadAll()
         {
             using (var ctx = new MirasolContext())
             {
-                return ctx.Apartments.ToList();
+                return ctx.Facilities.ToList();
             }
         }
 
-        public void Update(Apartment t)
+        public void Update(Facilities t)
         {
-            using (var ctx = new MirasolContext())
-            {
-                foreach (var apartment in ReadAll())
-                {
-                    if (t.Id == apartment.Id)
-                    {
-                        apartment.Address = t.Address;
-                    }
-                }
-            }
+            throw new NotImplementedException();
         }
     }
 }

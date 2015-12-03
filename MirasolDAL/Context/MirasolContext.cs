@@ -17,5 +17,6 @@ namespace MirasolDAL.Context
         }
 
         public DbSet<Apartment> Apartments { get; set; }
+        public DbSet<Facilities> Facilities { get; set; }
     }
 }

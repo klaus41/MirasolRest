@@ -16,7 +16,6 @@ namespace MirasolDTO.Converters
             {
                 Id = item.Id,
                 Address = item.Address,
-                HouseNumber = item.HouseNumber
             };
 
             return dto;

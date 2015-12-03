@@ -64,9 +64,11 @@
     <Compile Include="Context\MirasolContext.cs" />
     <Compile Include="Context\MirasolContextInitializer.cs" />
     <Compile Include="DomainModel\Apartment.cs" />
+    <Compile Include="DomainModel\Facilities.cs" />
     <Compile Include="Facade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ApartmentRepository.cs" />
+    <Compile Include="Repository\FacilityRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
   </ItemGroup>
   <ItemGroup>
