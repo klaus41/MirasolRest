@@ -11,6 +11,9 @@ namespace MirasolDAL
     public class Facade
     {
         private IRepository<Apartment> apartmentRepo;
+        private IRepository<Facilities> facilityRepo;
+        private IRepository<User> userRepo;
+        private IRepository<Bookings> bookingsRepo;
 
         public IRepository<Apartment> GetApartmentRepository()
         {
@@ -20,5 +23,32 @@ namespace MirasolDAL
             }
             return apartmentRepo;
         }
+
+        public IRepository<Facilities> GetFacilitiesRepository()
+        {
+            if ( facilityRepo == null)
+            {
+                facilityRepo = new FacilityRepository();
+            }
+            return facilityRepo;
+        }
+
+        public IRepository<User> GetUserReporitory()
+        {
+            if( userRepo == null)
+            {
+                userRepo = new UserRepository();
+            }
+            return userRepo;
+        }
+        public IRepository<Bookings> GetBookingsRepository()
+        {
+            if(bookingsRepo == null)
+            {
+                bookingsRepo = new BookingsRepository();
+            }
+            return bookingsRepo;
+        }
+        
     }
 }

@@ -25,8 +25,17 @@ namespace MirasolDAL.Context
                 SuitableFor = "Suitable for the elderly, pets not allowed, no smoking inside, car necessary",
             });
 
+            User user1 = context.Users.Add(new User()
+            {
+                Id = 1,
+                Address = "Strandbygade 46, 3.",
+                Email = "klausgaarde@live.dk",
+                Name= "Klaus Gaarde",
+                Password = "240789" 
+            });
+
             
-            apartments.Add(new Apartment() {
+            Apartment apartment1 = context.Apartments.Add(new Apartment() {
                 Address = "Torrox Costa 1202",
                 Bedrooms = 1,
                 Sleeps = 2,
@@ -39,13 +48,28 @@ namespace MirasolDAL.Context
                 TerraceFurniture = true,
                 AirCondition = true,
                 Heating = true,
+                PriceHighSeason = 750,
+                PriceLowSeason = 550,
+                PriceMiddleSeason = 650,
                 Facilities = facility1
                 
                  });
 
+
+            Bookings booking1 = context.Bookings.Add(new Bookings()
+            {
+                Id = 1,
+                Apartment = apartment1,
+                EndDate = new DateTime(2015, 10, 10),
+                StartDate = new DateTime (2015, 10, 17),
+                User = user1,
+            });
+
             foreach (Apartment apartment in apartments)
                 context.Apartments.Add(apartment);
           
+
+
             base.Seed(context);
         }
     }

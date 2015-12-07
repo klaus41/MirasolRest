@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.Serialization;
+using MirasolDAL.DomainModel;
 
 namespace MirasolDTO.Objects
 {
@@ -46,7 +47,22 @@ namespace MirasolDTO.Objects
         public bool AirCondition { get; set; }
         [DataMember]
         public bool Heating { get; set; }
-        
+        [DataMember]
+        public string Name { get; set; }
+        [DataMember]
+        public string PicturePath { get; set; }
+        [DataMember]
+        public int PriceLowSeason { get; set; }
+        [DataMember]
+        public int PriceMiddleSeason { get; set; }
+        [DataMember]
+        public int PriceHighSeason { get; set; }
+        [DataMember]
+        public virtual Facilities Facilities { get; set; }
+
+
+
+
     }
 }
     

@@ -55,11 +55,16 @@ namespace MirasolDAL.Repository
         {
             using (var ctx = new MirasolContext())
             {
+                string[] list = new string[] { "Address", "Bedrooms"};
+
                 foreach (var apartment in ReadAll())
                 {
                     if (t.Id == apartment.Id)
                     {
-                        apartment.Address = t.Address;
+                        for(int i = 0; i < list.Length; i++)
+                        {
+                            apartment.GetType().GetProperty(list[i]).SetValue(apartment, t.GetType().GetProperty(list[i]).GetValue(t));
+                        }
                     }
                 }
             }
