@@ -1,4 +1,5 @@
-﻿using MirasolDAL.DomainModel;
+﻿using MirasolDAL.Context;
+using MirasolDAL.DomainModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,22 +12,42 @@ namespace MirasolDAL.Repository
     {
         public void Add(User t)
         {
-            throw new NotImplementedException();
+            using (var ctx = new MirasolContext())
+            {
+                ctx.Users.Add(t);
+                ctx.SaveChanges();
+            }
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            User t = Find(id);
+            using (var ctx = new MirasolContext())
+            {
+                ctx.Users.Attach(t);
+                ctx.Users.Remove(t);
+                ctx.SaveChanges();
+            }
         }
 
         public User Find(int id)
         {
-            throw new NotImplementedException();
+            foreach (var item in ReadAll())
+            {
+                if(item.Id == id)
+                {
+                    return item;
+                }
+            }
+            return null;
         }
 
         public List<User> ReadAll()
         {
-            throw new NotImplementedException();
+            using (var ctx = new MirasolContext())
+            {
+                return ctx.Users.ToList();
+            }
         }
 
         public void Update(User t)

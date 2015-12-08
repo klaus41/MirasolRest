@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Converters\AbstractDtoConverter.cs" />
     <Compile Include="Converters\ApartmentConverter.cs" />
+    <Compile Include="Converters\FacilityConverter.cs" />
     <Compile Include="Objects\ApartmentDTO.cs" />
     <Compile Include="Objects\BookingsDTO.cs" />
     <Compile Include="Objects\FacilitiesDTO.cs" />

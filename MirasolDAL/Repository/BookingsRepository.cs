@@ -1,4 +1,5 @@
-﻿using MirasolDAL.DomainModel;
+﻿using MirasolDAL.Context;
+using MirasolDAL.DomainModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,22 +12,43 @@ namespace MirasolDAL.Repository
     {
         public void Add(Bookings t)
         {
-            throw new NotImplementedException();
+            using (var ctx = new MirasolContext())
+            {
+                ctx.Bookings.Add(t);
+                ctx.SaveChanges();
+            }
         }
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            Bookings t = Find(id);
+            using (var ctx = new MirasolContext())
+            {
+                ctx.Bookings.Attach(t);
+                ctx.Bookings.Remove(t);
+                ctx.SaveChanges();
+            }
         }
 
         public Bookings Find(int id)
         {
-            throw new NotImplementedException();
+            foreach (var item in ReadAll())
+            {
+                if (item.Id == id)
+                {
+                    return item;
+                }
+            }
+
+            return null;
         }
 
         public List<Bookings> ReadAll()
         {
-            throw new NotImplementedException();
+            using (var ctx = new MirasolContext())
+            {
+                return ctx.Bookings.ToList();
+            }
         }
 
         public void Update(Bookings t)
