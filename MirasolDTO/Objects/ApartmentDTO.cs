@@ -28,7 +28,9 @@ namespace MirasolDTO.Objects
         [DataMember]
         public int Terrace { get; set; }
         [DataMember]
-        public string Pool { get; set; }
+        public bool SharedPool { get; set; }
+        [DataMember]
+        public bool PrivatePool { get; set; }
         [DataMember]
         public string Jacuzzi { get; set; }
         [DataMember]
@@ -57,6 +59,8 @@ namespace MirasolDTO.Objects
         public int PriceMiddleSeason { get; set; }
         [DataMember]
         public int PriceHighSeason { get; set; }
+        [DataMember]
+        public bool OutsideJacuzzi { get; set; }
         [DataMember]
         public virtual Facilities Facilities { get; set; }
 

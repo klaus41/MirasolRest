@@ -25,5 +25,13 @@ namespace MirasolDTO.Objects
         [DataMember]
         public string SuitableFor { get; set; }
 
+        [DataMember]
+        public string Notes { get; set; }
+        [DataMember]
+        public string General { get; set; }
+        [DataMember]
+        public string Outside { get; set; }
+
+
     }
 }
