@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MirasolDTO.Converters
 {
-    class ApartmentConverter : AbstractDtoConverter<Apartment, ApartmentDTO>
+    public class ApartmentConverter : AbstractDtoConverter<Apartment, ApartmentDTO>
     {
         public override ApartmentDTO Convert(Apartment item)
         {

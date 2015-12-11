@@ -12,6 +12,10 @@ namespace MirasolDAL.Repository
     {
         public void Add(User t)
         {
+            if (t == null)
+            {
+                throw new ArgumentNullException("t");
+            }
             using (var ctx = new MirasolContext())
             {
                 ctx.Users.Add(t);
@@ -52,6 +56,10 @@ namespace MirasolDAL.Repository
 
         public void Update(User t)
         {
+            if (t == null)
+            {
+                throw new ArgumentNullException("t");
+            }
             throw new NotImplementedException();
         }
     }

@@ -1,6 +1,5 @@
 ﻿using MirasolDAL;
 using MirasolDAL.DomainModel;
-using MirasolDTO.Objects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,16 +13,30 @@ namespace MirasolRest.Controllers
     {
         public IEnumerable<Bookings> GetBookings()
         {
-            return new Facade().GetBookingsRepository().ReadAll();
+            try
+            {
+                return new Facade().GetBookingsRepository().ReadAll();
+            }
+            catch
+            {
+                throw new HttpResponseException(HttpStatusCode.InternalServerError);
+            }
         }
-        public BookingsDTO PostBookings(BookingsDTO dto)
+        public Bookings PostBookings(Bookings bookings)
         {
-            return dto;
+            var response = Request.CreateResponse<Bookings>(HttpStatusCode.Created, bookings);
+            new Facade().GetBookingsRepository().Add(bookings);
+            return bookings;
         }
 
         public Bookings Get(int id)
         {
-            return new Facade().GetBookingsRepository().Find(id);
+            Bookings bookings = new Facade().GetBookingsRepository().Find(id);
+            if (bookings == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            return bookings;
         }
     }
 }

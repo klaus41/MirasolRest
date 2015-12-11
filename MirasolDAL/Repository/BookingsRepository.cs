@@ -12,6 +12,10 @@ namespace MirasolDAL.Repository
     {
         public void Add(Bookings t)
         {
+            if (t == null)
+            {
+                throw new ArgumentNullException("t");
+            }
             using (var ctx = new MirasolContext())
             {
                 ctx.Bookings.Add(t);
@@ -53,6 +57,10 @@ namespace MirasolDAL.Repository
 
         public void Update(Bookings t)
         {
+            if (t == null)
+            {
+                throw new ArgumentNullException("t");
+            }
             throw new NotImplementedException();
         }
     }

@@ -13,6 +13,10 @@ namespace MirasolDAL.Repository
     {
         public void Add(Facilities t)
         {
+            if (t == null)
+            {
+                throw new ArgumentNullException("t");
+            }
             using (var ctx = new MirasolContext())
             {
                 ctx.Facilities.Add(t);
@@ -53,6 +57,10 @@ namespace MirasolDAL.Repository
 
         public void Update(Facilities t)
         {
+            if (t == null)
+            {
+                throw new ArgumentNullException("t");
+            }
             throw new NotImplementedException();
         }
     }

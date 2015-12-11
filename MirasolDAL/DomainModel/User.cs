@@ -17,12 +17,16 @@ namespace MirasolDAL.DomainModel
         [DataMember]
         public int Id { get; set; }
         [DataMember]
+        [Required]
         public string Name { get; set; }
         [DataMember]
         public string Address { get; set; }
         [DataMember]
+        [Display(Name = "E-mail address")]
+        [EmailAddress]
         public string Email { get; set; }
         [DataMember]
+        [MinLength(6, ErrorMessage = "The password must be at least 6 characters long")]
         public string Password { get; set; }
     }
 }

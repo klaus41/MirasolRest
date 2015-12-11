@@ -1,6 +1,5 @@
 ﻿using MirasolDAL;
 using MirasolDAL.DomainModel;
-using MirasolDTO.Objects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,17 +13,31 @@ namespace MirasolRest.Controllers
     {
         public IEnumerable<Facilities> GetFacilities()
         {
-            return new Facade().GetFacilitiesRepository().ReadAll();
+            try
+            {
+                return new Facade().GetFacilitiesRepository().ReadAll();
+            }
+            catch
+            {
+                throw new HttpResponseException(HttpStatusCode.InternalServerError);
+            }
         }
 
-        public FacilitiesDTO PostFacilities(FacilitiesDTO dto)
+        public Facilities PostFacilities(Facilities facilities)
         {
-            return dto;
+            var response = Request.CreateResponse<Facilities>(HttpStatusCode.Created, facilities);
+            new Facade().GetFacilitiesRepository().Add(facilities);
+            return facilities;
         }
 
         public Facilities Get(int id)
         {
-            return new Facade().GetFacilitiesRepository().Find(id);
+            Facilities facility = new Facade().GetFacilitiesRepository().Find(id);
+            if (facility == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            return facility;
         }
     }
 }

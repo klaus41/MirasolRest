@@ -13,6 +13,10 @@ namespace MirasolDAL.Repository
         
         public void Add(Apartment t)
         {
+            if (t == null)
+            {
+                throw new ArgumentNullException("t");
+            }
             using (var ctx = new MirasolContext())
             {
                 ctx.Apartments.Add(t);
@@ -53,6 +57,10 @@ namespace MirasolDAL.Repository
 
         public void Update(Apartment t)
         {
+            if (t == null)
+            {
+                throw new ArgumentNullException("t");
+            }
             using (var ctx = new MirasolContext())
             {
                 string[] list = new string[] { "Address", "Bedrooms"};
