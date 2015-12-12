@@ -12,6 +12,25 @@ namespace MirasolDAL.Context
     {
         protected override void Seed(MirasolContext context)
         {
+            Address address1 = context.Addresses.Add(new Address()
+            {
+                Id = 1,
+                City = "Marbella",
+                HouseNr = 1,
+                StreetName = "Imginary street",
+                ZipCode = 56000
+            });
+
+            Address address2 = context.Addresses.Add(new Address()
+            {
+                Id = 2,
+                City = "Torrox",
+                HouseNr = 1,
+                StreetName = "Imginary street",
+                ZipCode = 56000
+
+            });
+
            
 
             Facilities facility1 = context.Facilities.Add(new Facilities()
@@ -97,7 +116,7 @@ namespace MirasolDAL.Context
 
             
             Apartment apartment1 = context.Apartments.Add(new Apartment() {
-                Address = "Torrox Costa (Calaceite)",
+                Address = address2,
                 Bedrooms = 1,
                 Sleeps = 2,
                 Bathrooms = 1,
@@ -118,7 +137,7 @@ namespace MirasolDAL.Context
 
             Apartment apartment2 = context.Apartments.Add(new Apartment()
             {
-                Address = "Torrox Costa (Calaceite)",
+                Address = address2,
                 Bedrooms = 2,
                 Bathrooms = 2,
                 Sleeps = 5,
@@ -137,7 +156,7 @@ namespace MirasolDAL.Context
 
             Apartment apartment3 = context.Apartments.Add(new Apartment()
             {
-                Address = "El Penoncillo Beach",
+                Address = address1,
                 Bedrooms = 2,
                 Sleeps = 4,
                 Bathrooms = 2,
@@ -156,7 +175,7 @@ namespace MirasolDAL.Context
 
             Apartment apartment4 = context.Apartments.Add(new Apartment()
             {
-                Address = "El Penoncillo Beach",
+                Address = address1,
                 Bedrooms = 2,
                 Sleeps = 4,
                 Bathrooms = 2,
@@ -175,7 +194,7 @@ namespace MirasolDAL.Context
 
             Apartment apartment5 = context.Apartments.Add(new Apartment()
             {
-                Address = "El Penoncillo Beach",
+                Address = address1,
                 Bedrooms = 3,
                 Sleeps = 7,
                 Bathrooms = 2,
@@ -194,7 +213,7 @@ namespace MirasolDAL.Context
 
             Apartment apartment6 = context.Apartments.Add(new Apartment()
             {
-                Address = "El Penoncillo Beach",
+                Address = address1,
                 Bedrooms = 3,
                 Sleeps = 6,
                 Bathrooms = 2,

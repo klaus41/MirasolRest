@@ -17,7 +17,7 @@ namespace MirasolDAL.DomainModel
         [DataMember]
         public int Id { get; set; }
         [DataMember]
-        public string Address { get; set; }
+        public Address Address { get; set; }
         [DataMember]
         public int Bedrooms { get; set; }
         [DataMember]

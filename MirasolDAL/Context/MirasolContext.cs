@@ -20,5 +20,6 @@ namespace MirasolDAL.Context
         public DbSet<Facilities> Facilities { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Bookings> Bookings { get; set; }
+        public DbSet<Address> Addresses { get; set; }
     }
 }
