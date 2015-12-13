@@ -15,6 +15,7 @@ namespace MirasolDAL
         private IRepository<User> userRepo;
         private IRepository<Bookings> bookingsRepo;
         private IRepository<Address> addressRepo;
+        private IRepository<Prices> pricesRepo;
 
         public IRepository<Apartment> GetApartmentRepository()
         {
@@ -58,6 +59,15 @@ namespace MirasolDAL
                 addressRepo = new AddressRepository();
             }
             return addressRepo;
+        }
+
+        public IRepository<Prices> GetPricesRepository()
+        {
+            if (pricesRepo == null)
+            {
+                pricesRepo = new PricesRepository();
+            }
+            return pricesRepo;
         }
         
     }

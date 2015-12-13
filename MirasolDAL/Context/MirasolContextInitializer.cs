@@ -31,7 +31,25 @@ namespace MirasolDAL.Context
 
             });
 
-           
+            Prices pricePuntaDelFaro = context.Prices.Add(new Prices()
+            {
+                Id = 1,
+                BeachTowels = 5,
+                FinalCleaning = 80,
+                LinenAndTowels = 12,
+                LowSeason = 530,
+                MidSeason = 695,
+                HighSeason = 895
+            });
+
+            Prices priceCalaceite = context.Prices.Add(new Prices()
+            {
+                Id = 2,
+                FinalCleaning = 85,
+                LowSeason = 395,
+                MidSeason = 495,
+                HighSeason = 595
+            });
 
             Facilities facility1 = context.Facilities.Add(new Facilities()
             {
@@ -128,9 +146,7 @@ namespace MirasolDAL.Context
                 TerraceFurniture = true,
                 AirCondition = true,
                 Heating = true,
-                PriceHighSeason = 750,
-                PriceLowSeason = 550,
-                PriceMiddleSeason = 650,
+                Prices = priceCalaceite,
                 Facilities = facility1,
                 Name = "1202"
                  });
@@ -151,6 +167,7 @@ namespace MirasolDAL.Context
                 AirCondition = true,
                 Heating = true,
                 Facilities = facility2,
+                Prices = priceCalaceite,
                 Name = "5332"
             });
 
@@ -170,6 +187,7 @@ namespace MirasolDAL.Context
                 AirCondition = true,
                 Heating = true,
                 Facilities = facility3,
+                Prices = pricePuntaDelFaro,
                 Name = "13436"
             });
 
@@ -189,6 +207,7 @@ namespace MirasolDAL.Context
                 Satellite = true,
                 AirCondition = true,
                 Facilities = facility4,
+                Prices = pricePuntaDelFaro,
                 Name = "19946"
             });
 
@@ -208,6 +227,7 @@ namespace MirasolDAL.Context
                 Garden = true,
                 TerraceFurniture = true,
                 Facilities = facility5,
+                Prices = pricePuntaDelFaro,
                 Name = "22176"
             });
 
@@ -227,6 +247,7 @@ namespace MirasolDAL.Context
                 TerraceFurniture = true,
                 Satellite = true,
                 Facilities = facility6,
+                Prices = pricePuntaDelFaro,
                 Name = "17576"
             });
 

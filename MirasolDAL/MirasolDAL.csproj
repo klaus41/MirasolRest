@@ -67,6 +67,7 @@
     <Compile Include="DomainModel\Apartment.cs" />
     <Compile Include="DomainModel\Bookings.cs" />
     <Compile Include="DomainModel\Facilities.cs" />
+    <Compile Include="DomainModel\Prices.cs" />
     <Compile Include="DomainModel\User.cs" />
     <Compile Include="Facade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Repository\BookingsRepository.cs" />
     <Compile Include="Repository\FacilityRepository.cs" />
     <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\PricesRepository.cs" />
     <Compile Include="Repository\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>

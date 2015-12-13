@@ -57,11 +57,7 @@ namespace MirasolDAL.DomainModel
         [DataMember]
         public string PicturePath { get; set; }
         [DataMember]
-        public int PriceLowSeason { get; set; }
-        [DataMember]
-        public int PriceMiddleSeason { get; set; }
-        [DataMember]
-        public int PriceHighSeason { get; set; }
+        public Prices Prices { get; set; }
         [DataMember]
         public bool OutsideJacuzzi { get; set; }
         [DataMember]
