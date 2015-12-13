@@ -21,6 +21,8 @@ namespace MirasolDAL.DomainModel
         [MaxLength(4)]
         public int HouseNr { get; set; }
         [DataMember]
+        public int Floor { get; set; }
+        [DataMember]
         [Required]
         public string StreetName { get; set; }
         [DataMember]
@@ -29,5 +31,9 @@ namespace MirasolDAL.DomainModel
         [DataMember]
         [Required]
         public string City { get; set; }
+        [DataMember]
+        [Required]
+        public string Country { get; set; }
+
     }
 }

@@ -31,6 +31,17 @@ namespace MirasolDAL.Context
 
             });
 
+            Address addressKlaus = context.Addresses.Add(new Address()
+            {
+                Id = 3,
+                City = "Esbjerg",
+                Country = "Denmark",
+                HouseNr = 46,
+                Floor = 3,
+                StreetName = "Strandbygade",
+                ZipCode = 6700,
+            });
+
             Prices pricePuntaDelFaro = context.Prices.Add(new Prices()
             {
                 Id = 1,
@@ -123,10 +134,12 @@ namespace MirasolDAL.Context
                 SuitableFor = "Pets not allowed, no smoking inside, car not necessary"
             });
 
+
+
             User user1 = context.Users.Add(new User()
             {
                 Id = 1,
-                Address = "Strandbygade 46, 3.",
+                Address = address1,
                 Email = "klausgaarde@live.dk",
                 Name= "Klaus Gaarde",
                 Password = "240789" 
@@ -249,6 +262,25 @@ namespace MirasolDAL.Context
                 Facilities = facility6,
                 Prices = pricePuntaDelFaro,
                 Name = "17576"
+            });
+
+            Apartment apartment7 = context.Apartments.Add(new Apartment()
+            {
+                Address = address1,
+                Bedrooms = 2,
+                Sleeps = 6,
+                Bathrooms = 2,
+                LivingArea = 80,
+                Terrace = 72,
+                SharedPool = true,
+                OutsideJacuzzi = true,
+                WiFi = true,
+                RoofTerrace = true,
+                Garden = true,
+                TerraceFurniture = true,
+                Satellite = true,
+                Prices = pricePuntaDelFaro,
+                Name = "22711"
             });
 
             Bookings booking1 = context.Bookings.Add(new Bookings()

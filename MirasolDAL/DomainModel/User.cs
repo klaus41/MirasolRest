@@ -20,7 +20,7 @@ namespace MirasolDAL.DomainModel
         [Required]
         public string Name { get; set; }
         [DataMember]
-        public string Address { get; set; }
+        public Address Address { get; set; }
         [DataMember]
         [Display(Name = "E-mail address")]
         [EmailAddress]

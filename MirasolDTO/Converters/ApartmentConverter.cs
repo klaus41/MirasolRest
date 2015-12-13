@@ -14,8 +14,7 @@ namespace MirasolDTO.Converters
         {
             var dto = new ApartmentDTO()
             {
-                Id = item.Id,
-                Address = item.Address,
+                
             };
 
             return dto;
