@@ -55,14 +55,14 @@ namespace MirasolDAL.DomainModel
         [DataMember]
         public string Name { get; set; }
         [DataMember]
-        public string PicturePath { get; set; }
-        [DataMember]
         public Prices Prices { get; set; }
         [DataMember]
         public bool OutsideJacuzzi { get; set; }
         [DataMember]
         public virtual Facilities Facilities { get; set; }
-        
+        [DataMember]
+        public List<string> PictureURLs { get; set; }
+
 
 
 
