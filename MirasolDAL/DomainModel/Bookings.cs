@@ -17,20 +17,13 @@ namespace MirasolDAL.DomainModel
         [DataMember]
         public int Id { get; set; }
         [DataMember]
-        [Required]
         public Apartment Apartment { get; set; }
         [DataMember]
         [Required]
-        [DataType("date")]
-        [Display(Name = "Start Date")]
         public DateTime StartDate { get; set; }
         [DataMember]
-        [Required]
-        [DataType("date")]
-        [Display(Name = "End Date")]
         public DateTime EndDate { get; set; }
         [DataMember]
-        [Required]
         public User User { get; set; }
 
     }
