@@ -17,22 +17,16 @@ namespace MirasolDAL.DomainModel
         [DataMember]
         public int Id { get; set; }
         [DataMember]
-        [Required]
-        [MaxLength(4)]
         public int HouseNr { get; set; }
         [DataMember]
         public int Floor { get; set; }
         [DataMember]
-        [Required]
         public string StreetName { get; set; }
         [DataMember]
-        [Required]
         public int ZipCode { get; set; }
         [DataMember]
-        [Required]
         public string City { get; set; }
         [DataMember]
-        [Required]
         public string Country { get; set; }
 
     }
