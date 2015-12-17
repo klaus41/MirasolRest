@@ -13,15 +13,9 @@ namespace MirasolRest.Controllers
     {
         public IEnumerable<Apartment> GetApartments()
         {
-            try
-            {
+
                 return new Facade().GetApartmentRepository().ReadAll();
-            }
-            catch
-            {
-                throw new HttpResponseException(HttpStatusCode.InternalServerError);
-            }
-            
+
         }
 
         public Apartment PostApartment(Apartment apartment)
