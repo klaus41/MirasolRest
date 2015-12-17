@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MirasolDAL.Context
 {
-    public class MirasolContextInitializer : DropCreateDatabaseIfModelChanges<MirasolContext>
+    public class MirasolContextInitializer : DropCreateDatabaseAlways<MirasolContext>
     {
         protected override void Seed(MirasolContext context)
         {
@@ -291,8 +291,8 @@ namespace MirasolDAL.Context
                 StartDate = new DateTime (2015, 10, 17),
                 User = user1,
             });
+            
 
-           
             base.Seed(context);
         }
     }

@@ -15,13 +15,13 @@ namespace MirasolDAL.Context
             Database.SetInitializer(new MirasolContextInitializer());
             Configuration.ProxyCreationEnabled = false;
         }
-
+        
         public DbSet<Apartment> Apartments { get; set; }
         public DbSet<Facilities> Facilities { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Bookings> Bookings { get; set; }
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Prices> Prices { get; set; }
-
+        
     }
 }
