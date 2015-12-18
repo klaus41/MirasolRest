@@ -139,7 +139,7 @@ namespace MirasolDAL.Context
             User user1 = context.Users.Add(new User()
             {
                 Id = 1,
-                Address = address1,
+                Address = addressKlaus,
                 Email = "klausgaarde@live.dk",
                 Name= "Klaus Gaarde",
                 Password = "240789" 
