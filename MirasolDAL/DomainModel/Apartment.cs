@@ -35,8 +35,6 @@ namespace MirasolDAL.DomainModel
         [DataMember]
         public bool PrivatePool { get; set; }
         [DataMember]
-        public string Jacuzzi { get; set; }
-        [DataMember]
         public bool WiFi { get; set; }
         [DataMember]
         public bool RoofTerrace { get; set; }

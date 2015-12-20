@@ -17,10 +17,6 @@ namespace MirasolDAL.DomainModel
         [DataMember]
         public int Id { get; set; }
         [DataMember]
-<<<<<<< HEAD
-        [Required]
-=======
->>>>>>> 5314941c64ace9a110591e4ec774947ee2c5ee25
         public int HouseNr { get; set; }
         [DataMember]
         public int Floor { get; set; }
